@@ -6,7 +6,7 @@ const Login = () => {
     const {signIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state.from.path || '/';
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = event => {
         event.preventDefault();
